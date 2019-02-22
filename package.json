@@ -1,0 +1,26 @@
+{
+  "name": "simple-beach-theme",
+  "version": "0.0.2",
+  "description": "simple beach theme for portfolios and casual websites",
+  "main": "index.html",
+  "author": "codefusion",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass --watch ./styles/styles.scss:./styles/styles.css",
+    "prod:css": "csso ./styles/styles.css --output ./dist/styles.min.css",
+    "prod:js": "uglifyjs ./scripts/main.js -c -m --output ./dist/main.min.js",
+    "validate-html": "html-validator --file=index.html --verbose",
+    "prod:html": "minify ./index.html ./dist/index.html",
+    "prod:img": "imagemin img/** --out-dir=dist/img",
+    "build:prod": "yarn run prod:css && yarn run prod:js && yarn run prod:img",
+    "build:html": "yarn run validate-html && yarn run prod:html",
+    "build": "yarn build:html && yarn build:prod"
+  },
+  "dependencies": {
+    "csso-cli": "^1.1.0",
+    "harp-minify": "^0.4.0",
+    "html-validator-cli": "^3.2.0",
+    "imagemin-cli": "^3.0.0",
+    "uglify-es": "^3.3.4"
+  }
+}

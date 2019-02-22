@@ -1,0 +1,10 @@
+.NavbarToggle {
+  position: fixed;
+  top: 2rem;
+  right: calc(2.5% + 2rem);
+  z-index: 49;
+  button {
+    @include bg($lightblue);
+    color: #fff;
+  }
+}

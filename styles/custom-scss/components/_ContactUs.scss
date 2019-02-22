@@ -1,0 +1,30 @@
+.ContactUs {
+  @include bg(lighten(#e6dacc, 10));
+  height: 100%;
+  width: 100%;
+}
+
+.ContactUs__container {
+  @include flex(row, center, center);
+}
+
+.ContactUs__form {
+  @include flexCol(6, 12, 1rem, 1rem);
+  margin: 2rem auto;
+  button {
+    @include bg($darkblue);
+    padding: 0.5rem 0.75rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .form-input {
+    @include border(1px, solid, #e6dacc);
+  }
+  @include tablet {
+    @include flexCol(9, 12, 1rem, 1rem);
+  }
+  @include mobile {
+    @include flexCol(12, 12, 1rem, 1rem);
+  }
+}

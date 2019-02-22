@@ -1,0 +1,31 @@
+.Footer {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  color: #666;
+}
+
+.Footer__container {
+  @include flex(column, center, center);
+}
+
+.Footer__details {
+  h4 {
+    @include fontSize(2rem);
+    font-weight: 300;
+    font-family: $roboto-c;
+  }
+}
+
+.Footer__social {
+  @include flex(row, center, center);
+  width: 50%;
+  margin: 2rem auto;
+}
+
+.social__link {
+  margin: 0 2rem;
+  a {
+    color: #666;
+  }
+}
